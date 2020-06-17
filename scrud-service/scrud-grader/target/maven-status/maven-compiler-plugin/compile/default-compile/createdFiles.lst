@@ -1,0 +1,7 @@
+org\studentcrud\grader\mapper\ScrudGraderMapper.class
+org\studentcrud\grader\wrapper\GraderWrapper.class
+org\studentcrud\grader\feign\GraderClient.class
+org\studentcrud\grader\service\IGraderService.class
+org\studentcrud\grader\GraderApplication.class
+org\studentcrud\grader\service\impl\GraderServiceImpl.class
+org\studentcrud\grader\controller\GraderController.class

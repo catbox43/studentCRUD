@@ -1,0 +1,4 @@
+D:\IdeaProjects\studentCRUD\scrud-service-api\scrud-grader-api\src\main\java\org\studentcrud\grader\vo\GraderVO.java
+D:\IdeaProjects\studentCRUD\scrud-service-api\scrud-grader-api\src\main\java\org\studentcrud\grader\entity\ScrudGrader.java
+D:\IdeaProjects\studentCRUD\scrud-service-api\scrud-grader-api\src\main\java\org\studentcrud\grader\feign\IGraderClient.java
+D:\IdeaProjects\studentCRUD\scrud-service-api\scrud-grader-api\src\main\java\org\studentcrud\grader\feign\IGraderClientFallback.java

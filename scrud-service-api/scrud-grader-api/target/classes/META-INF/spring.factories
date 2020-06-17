@@ -1,0 +1,4 @@
+net.dreamlu.mica.feign.MicaFeignAutoConfiguration=\
+  org.studentcrud.grader.feign.IGraderClient
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.studentcrud.grader.feign.IGraderClientFallback
