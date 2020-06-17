@@ -1,6 +1,0 @@
-org\studentcrud\grader\entity\ScrudGrader.class
-org\studentcrud\grader\vo\GraderVO.class
-META-INF\spring-devtools.properties
-org\studentcrud\grader\feign\IGraderClientFallback.class
-META-INF\spring.factories
-org\studentcrud\grader\feign\IGraderClient.class

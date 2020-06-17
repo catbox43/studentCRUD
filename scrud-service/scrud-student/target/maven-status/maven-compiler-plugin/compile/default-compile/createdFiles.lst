@@ -1,6 +1,0 @@
-org\studentcrud\student\mapper\ScrudStudentMapper.class
-org\studentcrud\student\wrapper\StudentWrapper.class
-org\studentcrud\student\service\impl\StudentServiceImpl.class
-org\studentcrud\student\service\IStudentService.class
-org\studentcrud\student\StudentApplication.class
-org\studentcrud\student\controller\StudentController.class
