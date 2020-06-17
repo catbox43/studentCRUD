@@ -3,8 +3,8 @@ import { Button, Divider, Dropdown, Menu, message, Input } from 'antd';
 import React, { useState, useRef } from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import ProTable from '@ant-design/pro-table';
-import CreateForm from './components/CreateForm';
-import UpdateForm from './components/UpdateForm';
+import CreateForm from './CreateForm';
+import UpdateForm from './UpdateForm';
 import { queryStudent, updateStudent, addStudent, removeStudent } from './service';
 /**
  * 添加节点
@@ -123,11 +123,30 @@ const TableList = () => {
           text: '女',
         },
       },
+      rules: [
+        {
+          required: true,
+          message: '性别为必填项',
+        },
+      ],
     },
     {
       title: '班级名称',
       dataIndex: 'graderName',
       hideInSearch: true,
+      hideInForm: true,
+    },
+    {
+      title: '班级',
+      dataIndex: 'graderId',
+      hideInTable: true,
+      hideInSearch: true,
+      rules: [
+        {
+          required: true,
+          message: '班级为必填项',
+        },
+      ],
     },
     {
       title: '操作',
@@ -196,25 +215,25 @@ const TableList = () => {
         columns={columns}
         rowSelection={{}}
       />
-      <CreateForm onCancel={() => handleModalVisible(false)} modalVisible={createModalVisible}>
-        <ProTable
-          onSubmit={async (value) => {
-            const success = await handleAdd(value);
+      <CreateForm
+        onSubmit={async (value) => {
+          const success = await handleAdd(value);
 
-            if (success) {
-              handleModalVisible(false);
+          if (success) {
+            handleModalVisible(false);
+            setStepFormValues({});
 
-              if (actionRef.current) {
-                actionRef.current.reload();
-              }
+            if (actionRef.current) {
+              actionRef.current.reload();
             }
-          }}
-          rowKey="key"
-          type="form"
-          columns={columns}
-          rowSelection={{}}
-        />
-      </CreateForm>
+          }
+        }}
+        onCancel={() => {
+          handleModalVisible(false);
+          setStepFormValues({});
+        }}
+        createModalVisible={createModalVisible}
+      />
       {stepFormValues && Object.keys(stepFormValues).length ? (
         <UpdateForm
           onSubmit={async (value) => {
